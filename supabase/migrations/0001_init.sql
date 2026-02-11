@@ -326,10 +326,28 @@ declare
   g_id uuid;
   code text;
   start_date date;
+  template_count int;
 begin
   uid := auth.uid();
   if uid is null then
     raise exception 'Not authenticated';
+  end if;
+
+  if _group_name is null or length(trim(_group_name)) = 0 then
+    raise exception 'Group name is required';
+  end if;
+  if _display_name is null or length(trim(_display_name)) = 0 then
+    raise exception 'Display name is required';
+  end if;
+  if _timezone is null or length(trim(_timezone)) = 0 then
+    raise exception 'Timezone is required';
+  end if;
+
+  select count(*) into template_count
+  from public.day_templates
+  where day_number between 1 and 30;
+  if template_count <> 30 then
+    raise exception 'Day templates are not seeded (expected 30 rows)';
   end if;
 
   if _max_players < 2 or _max_players > 20 then
@@ -345,11 +363,11 @@ begin
   end loop;
 
   insert into public.groups (name, invite_code, start_date, timezone, cutoff_time, max_players, created_by)
-  values (_group_name, code, start_date, _timezone, _cutoff_time, _max_players, uid)
+  values (trim(_group_name), code, start_date, trim(_timezone), _cutoff_time, _max_players, uid)
   returning id into g_id;
 
   insert into public.group_members (group_id, user_id, role, display_name)
-  values (g_id, uid, 'supervisor', _display_name);
+  values (g_id, uid, 'supervisor', trim(_display_name));
 
   update public.profiles
   set active_group_id = g_id, updated_at = now()
@@ -390,9 +408,16 @@ begin
     raise exception 'Not authenticated';
   end if;
 
+  if _invite_code is null or length(trim(_invite_code)) = 0 then
+    raise exception 'Invite code is required';
+  end if;
+  if _display_name is null or length(trim(_display_name)) = 0 then
+    raise exception 'Display name is required';
+  end if;
+
   select id, max_players into g
   from public.groups
-  where invite_code = _invite_code;
+  where invite_code = upper(trim(_invite_code));
 
   if not found then
     raise exception 'Invite code not found';
@@ -407,7 +432,7 @@ begin
   end if;
 
   insert into public.group_members (group_id, user_id, role, display_name)
-  values (g.id, uid, 'player', _display_name)
+  values (g.id, uid, 'player', trim(_display_name))
   on conflict (group_id, user_id) do update
     set display_name = excluded.display_name;
 
