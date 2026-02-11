@@ -498,6 +498,16 @@ begin
 end;
 $$;
 
+-- Restrict RPC entrypoints to authenticated users only.
+revoke all on function public.create_group(text, text, date, text, time, int) from public;
+grant execute on function public.create_group(text, text, date, text, time, int) to authenticated;
+
+revoke all on function public.join_group(text, text) from public;
+grant execute on function public.join_group(text, text) to authenticated;
+
+revoke all on function public.override_submission(uuid, int, text) from public;
+grant execute on function public.override_submission(uuid, int, text) to authenticated;
+
 -- ---------- Triggers ----------
 
 create or replace function public.compute_submission_points()
