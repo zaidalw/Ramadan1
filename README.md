@@ -2,6 +2,11 @@
 
 Mobile-first competitive game app (RTL) for a private group (default 7 players, supports 2 to 20).
 
+## Public Share Link
+
+- Play now (GitHub Pages): `https://zaidalw.github.io/Ramadan1/`
+- Repo: `https://github.com/zaidalw/Ramadan1`
+
 ## Instant Share Mode
 
 If Supabase env vars are not configured, the app automatically opens:

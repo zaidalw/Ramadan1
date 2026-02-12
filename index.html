@@ -1,0 +1,1025 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="تحدي رمضان اليومي - لعبة تنافسية عربية" />
+    <title>تحدي رمضان اليومي</title>
+    <style>
+      :root {
+        --bg: #f6f2e8;
+        --panel: #fffdf8;
+        --ink: #1f2a1f;
+        --muted: #5d665d;
+        --primary: #0e6f5c;
+        --primary-2: #0a5a4a;
+        --gold: #d8a84b;
+        --line: #d9d1bf;
+        --danger: #8d2f2f;
+        --ok: #1f7a42;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Tahoma", "Arial", sans-serif;
+        background:
+          radial-gradient(800px 420px at 90% -5%, #f4e3b866, transparent 65%),
+          radial-gradient(700px 400px at 2% 0%, #b9d8ca66, transparent 62%),
+          var(--bg);
+        color: var(--ink);
+      }
+
+      .wrap {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 16px;
+      }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        box-shadow: 0 10px 24px #0000000d;
+        padding: 16px;
+        margin-bottom: 14px;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 28px;
+        margin-bottom: 6px;
+      }
+
+      h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      h3 {
+        font-size: 17px;
+        margin-bottom: 8px;
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+
+      .grid2 {
+        display: grid;
+        gap: 12px;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .grid3 {
+        display: grid;
+        gap: 8px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      label {
+        display: block;
+        font-size: 14px;
+        color: var(--muted);
+        margin-bottom: 6px;
+      }
+
+      input,
+      select,
+      textarea,
+      button {
+        font: inherit;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 10px 12px;
+        font-size: 16px;
+        background: #fff;
+        color: var(--ink);
+      }
+
+      textarea {
+        min-height: 110px;
+        resize: vertical;
+      }
+
+      .btn,
+      .chip {
+        border: 1px solid transparent;
+        border-radius: 12px;
+        min-height: 44px;
+        padding: 10px 14px;
+        cursor: pointer;
+        transition: 160ms ease;
+      }
+
+      .btn {
+        background: var(--primary);
+        color: #fff;
+        font-weight: 700;
+      }
+
+      .btn:hover {
+        background: var(--primary-2);
+      }
+
+      .btn.alt {
+        background: #fff;
+        color: var(--ink);
+        border-color: var(--line);
+      }
+
+      .btn.warn {
+        background: var(--danger);
+      }
+
+      .btn.small {
+        min-height: 38px;
+        font-size: 14px;
+        padding: 8px 10px;
+      }
+
+      .actions {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .chips {
+        display: grid;
+        gap: 8px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .chip {
+        background: #fff;
+        border-color: var(--line);
+        font-weight: 700;
+      }
+
+      .chip.active {
+        background: #173a31;
+        color: #fff;
+        border-color: #173a31;
+      }
+
+      .switch {
+        display: flex;
+        gap: 8px;
+      }
+
+      .switch .chip {
+        flex: 1;
+      }
+
+      .task {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 12px;
+      }
+
+      .task input {
+        width: 22px;
+        height: 22px;
+      }
+
+      .summary {
+        background: #f8f5ec;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 12px;
+        font-size: 14px;
+      }
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .table {
+        display: grid;
+        gap: 8px;
+      }
+
+      .r {
+        display: grid;
+        grid-template-columns: 42px 1fr auto auto;
+        gap: 8px;
+        align-items: center;
+        padding: 10px;
+        border-radius: 12px;
+        border: 1px solid var(--line);
+        background: #fff;
+      }
+
+      .rank {
+        text-align: center;
+        font-weight: 700;
+        color: var(--muted);
+      }
+
+      .score {
+        color: var(--gold);
+        font-weight: 800;
+      }
+
+      .streak {
+        font-size: 13px;
+        color: var(--ok);
+      }
+
+      .msg {
+        margin-top: 10px;
+        min-height: 20px;
+        font-size: 14px;
+      }
+
+      .msg.ok {
+        color: var(--ok);
+      }
+
+      .msg.err {
+        color: var(--danger);
+      }
+
+      .confetti-layer {
+        pointer-events: none;
+        position: fixed;
+        inset: 0;
+        overflow: hidden;
+        z-index: 100;
+      }
+
+      .confetti-piece {
+        position: absolute;
+        width: 9px;
+        height: 12px;
+        opacity: 0.9;
+        animation: fall 1200ms ease-in forwards;
+      }
+
+      @keyframes fall {
+        from {
+          transform: translateY(-20px) rotate(0deg);
+          opacity: 1;
+        }
+        to {
+          transform: translateY(105vh) rotate(520deg);
+          opacity: 0;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .grid2,
+        .grid3 {
+          grid-template-columns: 1fr;
+        }
+
+        .chips {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .r {
+          grid-template-columns: 34px 1fr auto;
+        }
+
+        .r .streak {
+          grid-column: 2 / span 2;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="confetti-layer" id="confetti"></div>
+    <main class="wrap">
+      <section class="card">
+        <h1>تحدي رمضان اليومي</h1>
+        <p class="muted">رابط عام جاهز للمشاركة - يعمل مباشرة بدون إعدادات</p>
+        <div class="actions" style="margin-top: 12px">
+          <button class="btn alt" id="copyLinkBtn">نسخ رابط اللعبة</button>
+          <button class="btn alt" id="copyGroupSummaryBtn">نسخ ملخص اليوم للمجموعة</button>
+          <button class="btn warn" id="resetBtn">تصفير البيانات المحلية</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>إعداد المجموعة</h2>
+        <div class="grid2">
+          <div>
+            <label for="groupName">اسم المجموعة</label>
+            <input id="groupName" />
+          </div>
+          <div>
+            <label for="dayNumber">اليوم (1 - 30)</label>
+            <input id="dayNumber" type="number" min="1" max="30" />
+          </div>
+        </div>
+
+        <div style="margin-top: 12px">
+          <label for="playersText">أسماء المشاركات - كل اسم في سطر</label>
+          <textarea id="playersText"></textarea>
+        </div>
+
+        <div class="actions" style="margin-top: 10px">
+          <button class="btn" id="saveGroupBtn">حفظ إعداد المجموعة</button>
+          <button class="btn alt" id="postDayBtn">نشر اليوم للمجموعة</button>
+        </div>
+        <p class="msg" id="groupMsg"></p>
+      </section>
+
+      <section class="card">
+        <h2>بطاقة اليوم</h2>
+        <div class="summary" id="dayCard"></div>
+
+        <details style="margin-top: 12px">
+          <summary style="cursor: pointer; font-weight: 700">وضع المشرفة</summary>
+          <div class="grid2" style="margin-top: 10px">
+            <div>
+              <label for="supervisorPass">كلمة مرور المشرفة</label>
+              <input id="supervisorPass" type="password" placeholder="افتراضي: 1234" />
+            </div>
+            <div>
+              <label for="correctAnswer">مفتاح إجابة الفقه لليوم</label>
+              <select id="correctAnswer">
+                <option value="true">صح</option>
+                <option value="false">خطأ</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="margin-top: 10px">
+            <label for="hadithText">نص الحديث المختصر</label>
+            <textarea id="hadithText"></textarea>
+          </div>
+          <div style="margin-top: 10px">
+            <label for="fiqhText">عبارة الفقه (صح أو خطأ)</label>
+            <textarea id="fiqhText"></textarea>
+          </div>
+          <div style="margin-top: 10px">
+            <label for="impactText">مهمة الأثر</label>
+            <textarea id="impactText"></textarea>
+          </div>
+
+          <div class="actions" style="margin-top: 10px">
+            <button class="btn" id="saveTemplateBtn">حفظ نصوص اليوم</button>
+          </div>
+          <p class="msg" id="templateMsg"></p>
+        </details>
+      </section>
+
+      <section class="card">
+        <h2>تسجيل نتيجة</h2>
+        <div class="grid2">
+          <div>
+            <label for="playerName">المشاركة</label>
+            <select id="playerName"></select>
+          </div>
+          <div class="summary">
+            <div class="row">
+              <strong>اليوم المنشور</strong>
+              <span id="postedDay">-</span>
+            </div>
+            <div class="row" style="margin-top: 6px">
+              <strong>إقفال اليوم</strong>
+              <span class="muted">11:59 م - Chicago</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 12px">
+          <h3>الورد (0 - 3)</h3>
+          <div class="chips" id="quranChips"></div>
+          <p class="muted" style="font-size: 13px; margin-top: 6px">
+            1 = نصف حزب | 2 = حزب | 3 = 3 حزب ونصف أو أكثر
+          </p>
+        </div>
+
+        <div style="margin-top: 12px">
+          <h3>الحديث والتطبيق (0 - 3)</h3>
+          <div class="chips" id="hadithChips"></div>
+          <p class="muted" style="font-size: 13px; margin-top: 6px">
+            1 = حفظ جزئي | 2 = حفظ كامل | 3 = حفظ + تطبيق عملي
+          </p>
+        </div>
+
+        <div style="margin-top: 12px">
+          <h3>فقه اليوم (صح - خطأ)</h3>
+          <div class="switch">
+            <button class="chip" id="fiqhTrue">صح</button>
+            <button class="chip" id="fiqhFalse">خطأ</button>
+          </div>
+        </div>
+
+        <div class="task" style="margin-top: 12px">
+          <input id="impactDone" type="checkbox" />
+          <label for="impactDone" style="margin: 0; color: var(--ink)">تم تنفيذ مهمة الأثر (2 نقاط)</label>
+        </div>
+
+        <div class="summary" style="margin-top: 12px">
+          <div class="row">
+            <strong>مجموع اليوم</strong>
+            <span id="projectedTotal" class="score">0/10</span>
+          </div>
+        </div>
+
+        <div class="actions" style="margin-top: 10px">
+          <button class="btn" id="saveEntryBtn">حفظ النتيجة</button>
+          <button class="btn alt" id="copyPlayerSummaryBtn">نسخ صيغة واتساب</button>
+          <button class="btn alt" id="copyShareResultBtn">نسخ مشاركة اليوم</button>
+        </div>
+        <p class="msg" id="entryMsg"></p>
+      </section>
+
+      <section class="card">
+        <h2>ترتيب اليوم</h2>
+        <div class="table" id="dailyTable"></div>
+      </section>
+
+      <section class="card">
+        <h2>الترتيب الإجمالي - السلسلة</h2>
+        <div class="table" id="overallTable"></div>
+      </section>
+    </main>
+
+    <script>
+      const STORAGE_KEY = "ramadan1_share_v2";
+
+      function createDefaultTemplates() {
+        return Array.from({ length: 30 }, (_, i) => ({
+          dayNumber: i + 1,
+          hadithText: `نص الحديث المختصر لليوم ${i + 1}`,
+          fiqhStatementText: `عبارة الفقه لليوم ${i + 1} - صح أو خطأ`,
+          impactTaskText: `مهمة الأثر لليوم ${i + 1}`,
+          correctAnswer: true,
+        }));
+      }
+
+      function defaultState() {
+        return {
+          groupName: "تحدي رمضان",
+          players: [
+            "المشاركة 1",
+            "المشاركة 2",
+            "المشاركة 3",
+            "المشاركة 4",
+            "المشاركة 5",
+            "المشاركة 6",
+            "المشاركة 7",
+          ],
+          dayTemplates: createDefaultTemplates(),
+          postedDay: 1,
+          supervisorPass: "1234",
+          entries: {},
+        };
+      }
+
+      function clamp(n, min, max) {
+        return Math.max(min, Math.min(max, n));
+      }
+
+      function getChicagoNow() {
+        const parts = new Intl.DateTimeFormat("en-US", {
+          timeZone: "America/Chicago",
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: false,
+        }).formatToParts(new Date());
+
+        const read = (type) => Number(parts.find((p) => p.type === type).value);
+        return {
+          year: read("year"),
+          month: read("month"),
+          day: read("day"),
+          hour: read("hour"),
+          minute: read("minute"),
+          second: read("second"),
+        };
+      }
+
+      function isAfterCutoff() {
+        const now = getChicagoNow();
+        return now.hour > 23 || (now.hour === 23 && now.minute > 59);
+      }
+
+      function calcTotal({ quranPoints, hadithPoints, fiqhAnswer, correctAnswer, impactDone }) {
+        const q = clamp(Number(quranPoints) || 0, 0, 3);
+        const h = clamp(Number(hadithPoints) || 0, 0, 3);
+        const fiqh = fiqhAnswer === correctAnswer ? 2 : 0;
+        const impact = impactDone ? 2 : 0;
+        return clamp(q + h + fiqh + impact, 0, 10);
+      }
+
+      function confettiBurst() {
+        const colors = ["#d8a84b", "#0e6f5c", "#7f5a2f", "#f2cf87", "#18443a"];
+        const layer = document.getElementById("confetti");
+        for (let i = 0; i < 70; i += 1) {
+          const piece = document.createElement("div");
+          piece.className = "confetti-piece";
+          piece.style.left = `${Math.random() * 100}vw`;
+          piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+          piece.style.animationDelay = `${Math.random() * 280}ms`;
+          piece.style.transform = `translateY(-20px) rotate(${Math.random() * 360}deg)`;
+          layer.appendChild(piece);
+          setTimeout(() => piece.remove(), 1400);
+        }
+      }
+
+      function makeChips(container, max, onSelect) {
+        container.innerHTML = "";
+        for (let i = 0; i <= max; i += 1) {
+          const b = document.createElement("button");
+          b.type = "button";
+          b.className = "chip";
+          b.textContent = String(i);
+          b.dataset.value = String(i);
+          b.addEventListener("click", () => onSelect(i));
+          container.appendChild(b);
+        }
+      }
+
+      function setMsg(id, text, ok = true) {
+        const el = document.getElementById(id);
+        el.textContent = text || "";
+        el.className = `msg ${text ? (ok ? "ok" : "err") : ""}`;
+      }
+
+      async function copyText(text, msgId, okText) {
+        try {
+          await navigator.clipboard.writeText(text);
+          setMsg(msgId, okText, true);
+        } catch {
+          setMsg(msgId, "فشل النسخ. انسخي النص يدويا.", false);
+        }
+      }
+
+      function calcStreak(days, pivotDay) {
+        const submitted = new Set(days);
+        let d = pivotDay;
+        let streak = 0;
+        while (submitted.has(d)) {
+          streak += 1;
+          d -= 1;
+        }
+        return streak;
+      }
+
+      async function loadSeedTemplates() {
+        try {
+          const res = await fetch("./supabase/seed/day-templates.json", { cache: "no-store" });
+          if (!res.ok) throw new Error("bad");
+          const data = await res.json();
+          if (!Array.isArray(data) || data.length < 30) throw new Error("invalid");
+          return data.slice(0, 30).map((row, idx) => ({
+            dayNumber: Number(row.dayNumber) || idx + 1,
+            hadithText: String(row.hadithText || ""),
+            fiqhStatementText: String(row.fiqhStatementText || ""),
+            impactTaskText: String(row.impactTaskText || ""),
+            correctAnswer: Boolean(row.correctAnswer),
+          }));
+        } catch {
+          return createDefaultTemplates();
+        }
+      }
+
+      function app() {
+        const ui = {
+          groupName: document.getElementById("groupName"),
+          dayNumber: document.getElementById("dayNumber"),
+          playersText: document.getElementById("playersText"),
+          saveGroupBtn: document.getElementById("saveGroupBtn"),
+          postDayBtn: document.getElementById("postDayBtn"),
+          groupMsg: document.getElementById("groupMsg"),
+          dayCard: document.getElementById("dayCard"),
+          supervisorPass: document.getElementById("supervisorPass"),
+          correctAnswer: document.getElementById("correctAnswer"),
+          hadithText: document.getElementById("hadithText"),
+          fiqhText: document.getElementById("fiqhText"),
+          impactText: document.getElementById("impactText"),
+          saveTemplateBtn: document.getElementById("saveTemplateBtn"),
+          templateMsg: document.getElementById("templateMsg"),
+          playerName: document.getElementById("playerName"),
+          postedDay: document.getElementById("postedDay"),
+          quranChips: document.getElementById("quranChips"),
+          hadithChips: document.getElementById("hadithChips"),
+          fiqhTrue: document.getElementById("fiqhTrue"),
+          fiqhFalse: document.getElementById("fiqhFalse"),
+          impactDone: document.getElementById("impactDone"),
+          projectedTotal: document.getElementById("projectedTotal"),
+          saveEntryBtn: document.getElementById("saveEntryBtn"),
+          copyPlayerSummaryBtn: document.getElementById("copyPlayerSummaryBtn"),
+          copyShareResultBtn: document.getElementById("copyShareResultBtn"),
+          copyGroupSummaryBtn: document.getElementById("copyGroupSummaryBtn"),
+          copyLinkBtn: document.getElementById("copyLinkBtn"),
+          resetBtn: document.getElementById("resetBtn"),
+          entryMsg: document.getElementById("entryMsg"),
+          dailyTable: document.getElementById("dailyTable"),
+          overallTable: document.getElementById("overallTable"),
+        };
+
+        const draft = {
+          quranPoints: 0,
+          hadithPoints: 0,
+          fiqhAnswer: true,
+          impactDone: false,
+        };
+
+        let state = defaultState();
+
+        function persist() {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        }
+
+        function loadLocalState() {
+          try {
+            const raw = localStorage.getItem(STORAGE_KEY);
+            if (!raw) return;
+            const parsed = JSON.parse(raw);
+            state = {
+              ...defaultState(),
+              ...parsed,
+              players: Array.isArray(parsed.players) ? parsed.players : defaultState().players,
+              dayTemplates: Array.isArray(parsed.dayTemplates) ? parsed.dayTemplates : defaultState().dayTemplates,
+              entries: parsed.entries && typeof parsed.entries === "object" ? parsed.entries : {},
+            };
+          } catch {
+            state = defaultState();
+          }
+        }
+
+        function currentDay() {
+          return clamp(Number(ui.dayNumber.value) || 1, 1, 30);
+        }
+
+        function currentPlayer() {
+          return ui.playerName.value || state.players[0];
+        }
+
+        function getTemplate(day) {
+          return state.dayTemplates.find((d) => d.dayNumber === day) || state.dayTemplates[day - 1];
+        }
+
+        function entryFor(player, day) {
+          return (state.entries[player] && state.entries[player][day]) || null;
+        }
+
+        function updateProjected() {
+          const template = getTemplate(currentDay());
+          const total = calcTotal({
+            quranPoints: draft.quranPoints,
+            hadithPoints: draft.hadithPoints,
+            fiqhAnswer: draft.fiqhAnswer,
+            correctAnswer: Boolean(template.correctAnswer),
+            impactDone: draft.impactDone,
+          });
+          ui.projectedTotal.textContent = `${total}/10`;
+          return total;
+        }
+
+        function paintChipGroup(container, value) {
+          Array.from(container.querySelectorAll(".chip")).forEach((chip) => {
+            chip.classList.toggle("active", Number(chip.dataset.value) === value);
+          });
+        }
+
+        function drawCard() {
+          const day = currentDay();
+          const tpl = getTemplate(day);
+          ui.dayCard.innerHTML = `
+            <div class="row"><strong>اليوم ${day}</strong><span class="muted">المجموعة: ${state.groupName}</span></div>
+            <p style="margin-top:8px"><strong>الحديث:</strong> ${tpl.hadithText || "-"}</p>
+            <p style="margin-top:8px"><strong>فقه اليوم:</strong> ${tpl.fiqhStatementText || "-"}</p>
+            <p style="margin-top:8px"><strong>مهمة الأثر:</strong> ${tpl.impactTaskText || "-"}</p>
+          `;
+
+          ui.correctAnswer.value = String(Boolean(tpl.correctAnswer));
+          ui.hadithText.value = tpl.hadithText || "";
+          ui.fiqhText.value = tpl.fiqhStatementText || "";
+          ui.impactText.value = tpl.impactTaskText || "";
+          ui.postedDay.textContent = String(state.postedDay || "-");
+        }
+
+        function drawPlayers() {
+          ui.playersText.value = state.players.join("\n");
+          ui.playerName.innerHTML = "";
+          state.players.forEach((name) => {
+            const opt = document.createElement("option");
+            opt.value = name;
+            opt.textContent = name;
+            ui.playerName.appendChild(opt);
+          });
+        }
+
+        function drawBoards() {
+          const day = currentDay();
+
+          const daily = state.players
+            .map((name) => ({
+              name,
+              total: entryFor(name, day)?.total || 0,
+            }))
+            .sort((a, b) => b.total - a.total || a.name.localeCompare(b.name, "ar"));
+
+          ui.dailyTable.innerHTML = "";
+          daily.forEach((row, i) => {
+            const item = document.createElement("div");
+            item.className = "r";
+            item.innerHTML = `
+              <div class="rank">${i + 1}</div>
+              <div><strong>${row.name}</strong></div>
+              <div class="score">${row.total}/10</div>
+              <div class="streak"></div>
+            `;
+            ui.dailyTable.appendChild(item);
+          });
+
+          const overall = state.players
+            .map((name) => {
+              const rows = state.entries[name] || {};
+              const dayKeys = Object.keys(rows).map(Number).sort((a, b) => a - b);
+              const sum = dayKeys.reduce((s, d) => s + (rows[d].total || 0), 0);
+              const streak = calcStreak(dayKeys, day);
+              return { name, sum, streak };
+            })
+            .sort((a, b) => b.sum - a.sum || b.streak - a.streak || a.name.localeCompare(b.name, "ar"));
+
+          ui.overallTable.innerHTML = "";
+          overall.forEach((row, i) => {
+            const item = document.createElement("div");
+            item.className = "r";
+            item.innerHTML = `
+              <div class="rank">${i + 1}</div>
+              <div><strong>${row.name}</strong></div>
+              <div class="score">${row.sum}</div>
+              <div class="streak">سلسلة ${row.streak} يوم</div>
+            `;
+            ui.overallTable.appendChild(item);
+          });
+        }
+
+        function hydrateDraftFromSaved() {
+          const saved = entryFor(currentPlayer(), currentDay());
+          draft.quranPoints = saved?.quranPoints || 0;
+          draft.hadithPoints = saved?.hadithPoints || 0;
+          draft.fiqhAnswer = saved?.fiqhAnswer ?? true;
+          draft.impactDone = Boolean(saved?.impactDone);
+
+          paintChipGroup(ui.quranChips, draft.quranPoints);
+          paintChipGroup(ui.hadithChips, draft.hadithPoints);
+          ui.fiqhTrue.classList.toggle("active", draft.fiqhAnswer === true);
+          ui.fiqhFalse.classList.toggle("active", draft.fiqhAnswer === false);
+          ui.impactDone.checked = draft.impactDone;
+          updateProjected();
+        }
+
+        function updateAll() {
+          ui.groupName.value = state.groupName;
+          ui.dayNumber.value = String(currentDay());
+          drawCard();
+          drawPlayers();
+          hydrateDraftFromSaved();
+          drawBoards();
+        }
+
+        function isSupervisorValid() {
+          const pass = ui.supervisorPass.value.trim();
+          return pass && pass === state.supervisorPass;
+        }
+
+        function saveTemplate() {
+          if (!isSupervisorValid()) {
+            setMsg("templateMsg", "كلمة مرور المشرفة غير صحيحة.", false);
+            return;
+          }
+
+          const day = currentDay();
+          const idx = state.dayTemplates.findIndex((d) => d.dayNumber === day);
+          const next = {
+            dayNumber: day,
+            hadithText: ui.hadithText.value.trim(),
+            fiqhStatementText: ui.fiqhText.value.trim(),
+            impactTaskText: ui.impactText.value.trim(),
+            correctAnswer: ui.correctAnswer.value === "true",
+          };
+
+          if (idx >= 0) {
+            state.dayTemplates[idx] = next;
+          } else {
+            state.dayTemplates.push(next);
+            state.dayTemplates.sort((a, b) => a.dayNumber - b.dayNumber);
+          }
+
+          persist();
+          drawCard();
+          updateProjected();
+          setMsg("templateMsg", "تم حفظ نصوص اليوم ومفتاح الإجابة.", true);
+        }
+
+        function saveGroup() {
+          const names = ui.playersText.value
+            .split("\n")
+            .map((v) => v.trim())
+            .filter(Boolean)
+            .slice(0, 20);
+
+          if (names.length < 2) {
+            setMsg("groupMsg", "أدخلي اسمين على الأقل.", false);
+            return;
+          }
+
+          state.groupName = ui.groupName.value.trim() || "تحدي رمضان";
+          state.players = names;
+          persist();
+          drawPlayers();
+          hydrateDraftFromSaved();
+          drawBoards();
+          setMsg("groupMsg", "تم حفظ إعداد المجموعة.", true);
+        }
+
+        function postDay() {
+          state.postedDay = currentDay();
+          persist();
+          ui.postedDay.textContent = String(state.postedDay);
+          setMsg("groupMsg", `تم نشر اليوم ${state.postedDay}.`, true);
+        }
+
+        function saveEntry() {
+          const day = currentDay();
+          const player = currentPlayer();
+          const afterCutoff = isAfterCutoff();
+
+          if (afterCutoff && !isSupervisorValid()) {
+            setMsg("entryMsg", "تم إغلاق التعديل بعد 11:59 م Chicago. المشرفة فقط يمكنها التعديل.", false);
+            return;
+          }
+
+          if (!player) {
+            setMsg("entryMsg", "اختاري مشاركة أولا.", false);
+            return;
+          }
+
+          const tpl = getTemplate(day);
+          const total = calcTotal({
+            quranPoints: draft.quranPoints,
+            hadithPoints: draft.hadithPoints,
+            fiqhAnswer: draft.fiqhAnswer,
+            correctAnswer: Boolean(tpl.correctAnswer),
+            impactDone: draft.impactDone,
+          });
+
+          if (!state.entries[player]) state.entries[player] = {};
+          state.entries[player][day] = {
+            quranPoints: draft.quranPoints,
+            hadithPoints: draft.hadithPoints,
+            fiqhAnswer: draft.fiqhAnswer,
+            impactDone: draft.impactDone,
+            total,
+            submittedAt: new Date().toISOString(),
+          };
+
+          persist();
+          drawBoards();
+          setMsg("entryMsg", `تم حفظ نتيجة ${player}: ${total}/10`, true);
+          if (total === 10) confettiBurst();
+        }
+
+        function getDailyRank(player, day) {
+          const rows = state.players
+            .map((name) => ({
+              name,
+              total: entryFor(name, day)?.total || 0,
+            }))
+            .sort((a, b) => b.total - a.total || a.name.localeCompare(b.name, "ar"));
+          return rows.findIndex((r) => r.name === player) + 1;
+        }
+
+        function copyPlayerSummary() {
+          const day = currentDay();
+          const player = currentPlayer();
+          const total = updateProjected();
+          const txt = `اليوم ${day} | ${player}\n(ورد:${draft.quranPoints} - حديث:${draft.hadithPoints} - فقه:${draft.fiqhAnswer ? "صح" : "خطأ"} - أثر:${draft.impactDone ? "تم" : "لم يتم"})\nالمجموع: ${total}/10`;
+          copyText(txt, "entryMsg", "تم نسخ صيغة واتساب.");
+        }
+
+        function copyShareResult() {
+          const day = currentDay();
+          const player = currentPlayer();
+          const total = entryFor(player, day)?.total || updateProjected();
+          const rank = getDailyRank(player, day);
+          const txt = `نتيجة اليوم: ${total}/10 - الترتيب: ${rank || "?"}`;
+          copyText(txt, "entryMsg", "تم نسخ مشاركة اليوم.");
+        }
+
+        function copyGroupSummary() {
+          const day = currentDay();
+          const rows = state.players
+            .map((name) => ({ name, total: entryFor(name, day)?.total || 0 }))
+            .sort((a, b) => b.total - a.total || a.name.localeCompare(b.name, "ar"));
+          const lines = rows.map((r, i) => `${i + 1}. ${r.name}: ${r.total}/10`);
+          const txt = `ملخص اليوم ${day} - ${state.groupName}\n${lines.join("\n")}`;
+          copyText(txt, "entryMsg", "تم نسخ ملخص المجموعة.");
+        }
+
+        function bind() {
+          makeChips(ui.quranChips, 3, (v) => {
+            draft.quranPoints = v;
+            paintChipGroup(ui.quranChips, v);
+            updateProjected();
+          });
+
+          makeChips(ui.hadithChips, 3, (v) => {
+            draft.hadithPoints = v;
+            paintChipGroup(ui.hadithChips, v);
+            updateProjected();
+          });
+
+          ui.fiqhTrue.addEventListener("click", () => {
+            draft.fiqhAnswer = true;
+            ui.fiqhTrue.classList.add("active");
+            ui.fiqhFalse.classList.remove("active");
+            updateProjected();
+          });
+
+          ui.fiqhFalse.addEventListener("click", () => {
+            draft.fiqhAnswer = false;
+            ui.fiqhFalse.classList.add("active");
+            ui.fiqhTrue.classList.remove("active");
+            updateProjected();
+          });
+
+          ui.impactDone.addEventListener("change", () => {
+            draft.impactDone = ui.impactDone.checked;
+            updateProjected();
+          });
+
+          ui.dayNumber.addEventListener("change", () => {
+            ui.dayNumber.value = String(currentDay());
+            drawCard();
+            hydrateDraftFromSaved();
+            drawBoards();
+          });
+
+          ui.playerName.addEventListener("change", () => {
+            hydrateDraftFromSaved();
+            drawBoards();
+          });
+
+          ui.saveGroupBtn.addEventListener("click", saveGroup);
+          ui.postDayBtn.addEventListener("click", postDay);
+          ui.saveTemplateBtn.addEventListener("click", saveTemplate);
+          ui.saveEntryBtn.addEventListener("click", saveEntry);
+          ui.copyPlayerSummaryBtn.addEventListener("click", copyPlayerSummary);
+          ui.copyShareResultBtn.addEventListener("click", copyShareResult);
+          ui.copyGroupSummaryBtn.addEventListener("click", copyGroupSummary);
+          ui.copyLinkBtn.addEventListener("click", () => copyText(location.href, "entryMsg", "تم نسخ رابط اللعبة."));
+
+          ui.resetBtn.addEventListener("click", () => {
+            if (!confirm("هل تريدين تصفير كل البيانات المحلية؟")) return;
+            state = defaultState();
+            persist();
+            updateAll();
+            setMsg("entryMsg", "تم التصفير.", true);
+          });
+        }
+
+        loadLocalState();
+        bind();
+
+        loadSeedTemplates().then((templates) => {
+          if (!localStorage.getItem(STORAGE_KEY)) {
+            state.dayTemplates = templates;
+            persist();
+          } else if (state.dayTemplates.every((d) => /نص الحديث المختصر/.test(d.hadithText || ""))) {
+            state.dayTemplates = templates;
+            persist();
+          }
+          updateAll();
+        });
+      }
+
+      app();
+    </script>
+  </body>
+</html>
