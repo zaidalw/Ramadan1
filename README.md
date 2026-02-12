@@ -12,6 +12,7 @@ Mobile-first competitive game app (RTL) for a private group (default 7 players, 
 If Supabase env vars are not configured, the app automatically opens:
 
 - `/quick-play` - a no-login local game mode (works immediately after deploy)
+- Includes the 30-day Ramadan plan + supervisor answer key from your provided program
 
 Use this when you want a fast shareable link with zero setup.
 

@@ -1,213 +1,212 @@
 [
   {
     "dayNumber": 1,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 1 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 1 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 1 هنا",
+    "hadithText": "إنما الأعمال بالنيات.",
+    "fiqhStatementText": "النية لصوم رمضان تصح إلى ما قبل نصف النهار الشرعي إذا لم يأكل ولم يشرب.",
+    "impactTaskText": "رسالة صلة رحم (رسالة أو اتصال قصير).",
     "correctAnswer": true
   },
   {
     "dayNumber": 2,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 2 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 2 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 2 هنا",
-    "correctAnswer": true
+    "hadithText": "الدين النصيحة.",
+    "fiqhStatementText": "السحور واجب ومن تركه بطل صومه.",
+    "impactTaskText": "صدقة ولو بسيطة.",
+    "correctAnswer": false
   },
   {
     "dayNumber": 3,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 3 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 3 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 3 هنا",
+    "hadithText": "لا ضرر ولا ضرار.",
+    "fiqhStatementText": "من أكل أو شرب ناسيا في نهار رمضان فصومه صحيح ويتم صومه.",
+    "impactTaskText": "دعاء لشخص محدد + رسالة طيبة.",
     "correctAnswer": true
   },
   {
     "dayNumber": 4,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 4 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 4 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 4 هنا",
+    "hadithText": "من كان يؤمن بالله واليوم الآخر فليقل خيرا أو ليصمت.",
+    "fiqhStatementText": "ابتلاع الريق (اللعاب) المعتاد لا يفسد الصوم.",
+    "impactTaskText": "مساعدة في البيت قبل الإفطار.",
     "correctAnswer": true
   },
   {
     "dayNumber": 5,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 5 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 5 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 5 هنا",
+    "hadithText": "تبسمك في وجه أخيك صدقة.",
+    "fiqhStatementText": "من تعمد القيء أفطر، ومن غلبه القيء فلا يفطر.",
+    "impactTaskText": "كظم غيظ أو عفو عن إساءة.",
     "correctAnswer": true
   },
   {
     "dayNumber": 6,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 6 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 6 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 6 هنا",
+    "hadithText": "أحب الأعمال إلى الله أدومها وإن قل.",
+    "fiqhStatementText": "تأخير غسل الجنابة إلى ما بعد الفجر لا يفسد الصوم.",
+    "impactTaskText": "تفريج كربة - قضاء حاجة بسيطة لأحد.",
     "correctAnswer": true
   },
   {
     "dayNumber": 7,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 7 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 7 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 7 هنا",
+    "hadithText": "المسلم من سلم المسلمون من لسانه ويده.",
+    "fiqhStatementText": "الاحتلام في نهار الصوم لا يفسد الصوم.",
+    "impactTaskText": "ذكر 100 استغفار خلال اليوم.",
     "correctAnswer": true
   },
   {
     "dayNumber": 8,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 8 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 8 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 8 هنا",
-    "correctAnswer": true
+    "hadithText": "الكلمة الطيبة صدقة.",
+    "fiqhStatementText": "دخول الغبار أو الدخان بغير قصد يفسد الصوم.",
+    "impactTaskText": "زيارة مريضة أو اتصال للاطمئنان.",
+    "correctAnswer": false
   },
   {
     "dayNumber": 9,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 9 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 9 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 9 هنا",
+    "hadithText": "خيركم من تعلم القرآن وعلمه.",
+    "fiqhStatementText": "المضمضة والاستنشاق في الوضوء جائزان للصائم مع عدم المبالغة.",
+    "impactTaskText": "إطعام - مشاركة شيء من الإفطار.",
     "correctAnswer": true
   },
   {
     "dayNumber": 10,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 10 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 10 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 10 هنا",
+    "hadithText": "من سلك طريقا يلتمس فيه علما سهل الله له به طريقا إلى الجنة.",
+    "fiqhStatementText": "تذوق الطعام للحاجة جائز بشرط عدم ابتلاعه.",
+    "impactTaskText": "شكر شخص خدمك اليوم.",
     "correctAnswer": true
   },
   {
     "dayNumber": 11,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 11 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 11 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 11 هنا",
-    "correctAnswer": true
+    "hadithText": "ارحموا من في الأرض يرحمكم من في السماء.",
+    "fiqhStatementText": "السواك مكروه كراهة تحريم للصائم طوال النهار.",
+    "impactTaskText": "تخصيص 10 دقائق قرآن تدبر.",
+    "correctAnswer": false
   },
   {
     "dayNumber": 12,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 12 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 12 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 12 هنا",
+    "hadithText": "ليس الشديد بالصرعة، إنما الشديد الذي يملك نفسه عند الغضب.",
+    "fiqhStatementText": "استعمال معجون الأسنان جائز إذا تيقن الصائم أنه لم يبتلع شيئا.",
+    "impactTaskText": "بر الوالدين - خدمة أو اتصال.",
     "correctAnswer": true
   },
   {
     "dayNumber": 13,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 13 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 13 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 13 هنا",
+    "hadithText": "ومن يتصبر يصبره الله… وما اعطي احد عطاء خيرا وأوسع من الصبر.",
+    "fiqhStatementText": "من جامع في نهار رمضان عامدا فعليه القضاء والكفارة.",
+    "impactTaskText": "صدقة سرية قدر الإمكان.",
     "correctAnswer": true
   },
   {
     "dayNumber": 14,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 14 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 14 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 14 هنا",
+    "hadithText": "من لا يشكر الناس لا يشكر الله.",
+    "fiqhStatementText": "المرأة الحائض أو النفساء لا يصح صومها وتقضي بعد رمضان.",
+    "impactTaskText": "صلة رحم - سؤال عن قريب.",
     "correctAnswer": true
   },
   {
     "dayNumber": 15,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 15 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 15 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 15 هنا",
-    "correctAnswer": true
+    "hadithText": "من حسن إسلام المرء تركه ما لا يعنيه.",
+    "fiqhStatementText": "الغيبة تبطل الصوم ويلزم القضاء.",
+    "impactTaskText": "إصلاح ذات البين - كلمة طيبة.",
+    "correctAnswer": false
   },
   {
     "dayNumber": 16,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 16 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 16 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 16 هنا",
+    "hadithText": "اتق الله حيثما كنت، وأتبع السيئة الحسنة تمحها، وخالق الناس بخلق حسن.",
+    "fiqhStatementText": "الحقنة الشرجية (الإدخال في الدبر) تفسد الصوم.",
+    "impactTaskText": "تسبيح خلال اليوم ( سبحان الله والحمدلله ولا إله إلا الله والله أكبر) مئة مرة",
     "correctAnswer": true
   },
   {
     "dayNumber": 17,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 17 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 17 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 17 هنا",
+    "hadithText": "إن الله جميل يحب الجمال.",
+    "fiqhStatementText": "قطرة الأنف إذا وصلت إلى الحلق تفسد الصوم.",
+    "impactTaskText": "هدية بسيطة (حتى رسالة).",
     "correctAnswer": true
   },
   {
     "dayNumber": 18,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 18 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 18 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 18 هنا",
+    "hadithText": "ما نقصت صدقة من مال.",
+    "fiqhStatementText": "ابتلاع ريق شخص آخر يفسد الصوم.",
+    "impactTaskText": "قراءة صفحة من تفسير قصير.",
     "correctAnswer": true
   },
   {
     "dayNumber": 19,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 19 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 19 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 19 هنا",
+    "hadithText": "الراحمون يرحمهم الرحمن.",
+    "fiqhStatementText": "من أفطر بعذر سفر يقضي بعد رمضان ولا إثم عليه.",
+    "impactTaskText": "ذكر صباح ومساء (مختصر).",
     "correctAnswer": true
   },
   {
     "dayNumber": 20,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 20 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 20 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 20 هنا",
-    "correctAnswer": true
+    "hadithText": "يسروا ولا تعسروا، وبشروا ولا تنفروا.",
+    "fiqhStatementText": "المسافر لا يصح منه الصوم في رمضان.",
+    "impactTaskText": "مساعدة جارة أو صديقة.",
+    "correctAnswer": false
   },
   {
     "dayNumber": 21,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 21 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 21 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 21 هنا",
+    "hadithText": "لا تحاسدوا ولا تباغضوا ولا تدابروا وكونوا عباد الله إخوانا.",
+    "fiqhStatementText": "من أفطر متعمدا بلا عذر فعليه القضاء والتوبة.",
+    "impactTaskText": "إطعام طير/حيوان أو سقي ماء.",
     "correctAnswer": true
   },
   {
     "dayNumber": 22,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 22 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 22 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 22 هنا",
+    "hadithText": "ان الله كتب الحسان على كل شيء",
+    "fiqhStatementText": "الإمساك عن المفطرات يبدأ من طلوع الفجر الصادق إلى غروب الشمس.",
+    "impactTaskText": "مبادرة خير في المجموعة (فكرة نافعة).",
     "correctAnswer": true
   },
   {
     "dayNumber": 23,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 23 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 23 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 23 هنا",
+    "hadithText": "الدال على الخير كفاعله.",
+    "fiqhStatementText": "إذا طلع الفجر والصائم في فمه طعام وجب لفظه وإلا فسد صومه.",
+    "impactTaskText": "ترك عادة سيئة يوما كاملا.",
     "correctAnswer": true
   },
   {
     "dayNumber": 24,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 24 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 24 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 24 هنا",
+    "hadithText": "لا يدخل الجنة من كان في قلبه مثقال ذرة من كبر.",
+    "fiqhStatementText": "بلع النخامة (البلغم) إذا خرجت إلى الفم ثم ابتلعها يفسد الصوم.",
+    "impactTaskText": "دعاء لنفسك وللآخرين 5 دقائق.",
     "correctAnswer": true
   },
   {
     "dayNumber": 25,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 25 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 25 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 25 هنا",
+    "hadithText": "من غشنا فليس منا.",
+    "fiqhStatementText": "الكحل (الإثمد) لا يفسد الصوم.",
+    "impactTaskText": "تعليم فائدة دينية قصيرة لشخص.",
     "correctAnswer": true
   },
   {
     "dayNumber": 26,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 26 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 26 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 26 هنا",
+    "hadithText": "الطهور شطر الإيمان.",
+    "fiqhStatementText": "التبرع بالدم لا يفسد الصوم.",
+    "impactTaskText": "صدقة جارية صغيرة (نتشارك فيها.",
     "correctAnswer": true
   },
   {
     "dayNumber": 27,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 27 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 27 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 27 هنا",
-    "correctAnswer": true
+    "hadithText": "إن الله كتب الإحسان على كل شيء.",
+    "fiqhStatementText": "التبرع بالدم يفسد الصوم مطلقا.",
+    "impactTaskText": "تلاوة سورة قصيرة بصوت حسن.",
+    "correctAnswer": false
   },
   {
     "dayNumber": 28,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 28 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 28 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 28 هنا",
-    "correctAnswer": true
+    "hadithText": "من نفس عن مسلمٍ كربة من كرب الدنيا نفس اللهُ عنه كربة من كُرَبِ يومِ القيامة… واللهُ في عَون العبدِ ما كان العبد في عَون أخي",
+    "fiqhStatementText": "من نام طول النهار بطل صومه.",
+    "impactTaskText": "إحسان لشخص او صديق)",
+    "correctAnswer": false
   },
   {
     "dayNumber": 29,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 29 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 29 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 29 هنا",
+    "hadithText": "استفت قلبك وإن أفتاك الناس.",
+    "fiqhStatementText": "من أكل شاكّا في طلوع الفجر ثم تبين أنه أكل بعد الفجر فعليه القضاء.",
+    "impactTaskText": "جلسة ذكر 10 دقائق.",
     "correctAnswer": true
   },
   {
     "dayNumber": 30,
-    "hadithText": "TODO - الصقي نص الحديث المختصر لليوم 30 هنا",
-    "fiqhStatementText": "TODO - الصقي عبارة الفقه (صح أو خطأ) لليوم 30 هنا",
-    "impactTaskText": "TODO - الصقي مهمة الأثر لليوم 30 هنا",
+    "hadithText": "اللهم إني أسألك علما نافعا ورزقا طيبا وعملا متقبلا.",
+    "fiqhStatementText": "من أكل ظانا غروب الشمس ثم تبين أنها لم تغرب فعليه القضاء.",
+    "impactTaskText": "ختم اليوم بصلاة على النبي 100 مرة.",
     "correctAnswer": true
   }
 ]
-
