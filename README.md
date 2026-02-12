@@ -2,6 +2,14 @@
 
 Mobile-first competitive game app (RTL) for a private group (default 7 players, supports 2 to 20).
 
+## Instant Share Mode
+
+If Supabase env vars are not configured, the app automatically opens:
+
+- `/quick-play` - a no-login local game mode (works immediately after deploy)
+
+Use this when you want a fast shareable link with zero setup.
+
 ## Features
 
 - Arabic-only UI with RTL layout
@@ -16,6 +24,7 @@ Mobile-first competitive game app (RTL) for a private group (default 7 players, 
   - Supervisor (مشرفة): edit content, see answer key, override totals with reason (audit log), export CSV, print scoreboard
   - Player (مشاركة): submit daily results, see history and leaderboards
 - Cutoff lock for players (default 23:59 America/Chicago), supervisor can still edit
+- Quick-play local mode for instant sharing without backend setup
 
 ## Tech Stack
 
@@ -82,4 +91,3 @@ If you want to run the seed script from CI, add `SUPABASE_SERVICE_ROLE_KEY` as w
 ## Manual Tests
 
 See `TESTING.md`.
-

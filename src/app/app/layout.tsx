@@ -3,8 +3,11 @@ import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { GroupProvider } from "@/components/GroupProvider";
 import { AppChrome } from "@/components/AppChrome";
 import type { Group, GroupMember } from "@/lib/types";
+import { hasSupabaseEnv } from "@/lib/env";
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
+  if (!hasSupabaseEnv) redirect("/quick-play");
+
   const supabase = await createSupabaseServerClient();
 
   const {

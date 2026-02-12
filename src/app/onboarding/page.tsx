@@ -2,8 +2,11 @@ import { redirect } from "next/navigation";
 import { PublicShell } from "@/components/PublicShell";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { OnboardingClient } from "@/app/onboarding/OnboardingClient";
+import { hasSupabaseEnv } from "@/lib/env";
 
 export default async function OnboardingPage() {
+  if (!hasSupabaseEnv) redirect("/quick-play");
+
   const supabase = await createSupabaseServerClient();
   const {
     data: { user },

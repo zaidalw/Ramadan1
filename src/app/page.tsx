@@ -1,7 +1,12 @@
 import { redirect } from "next/navigation";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { hasSupabaseEnv } from "@/lib/env";
 
 export default async function IndexPage() {
+  if (!hasSupabaseEnv) {
+    redirect("/quick-play");
+  }
+
   const supabase = await createSupabaseServerClient();
 
   const {
